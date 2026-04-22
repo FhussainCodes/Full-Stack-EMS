@@ -20,33 +20,33 @@ const Sidebar = () => {
 
     const navItems = [
         {
-            name:"Dashboard",
+            name: "Dashboard",
             href: "/dashboard",
             icon: LayoutGridIcon
         },
         role === "ADMIN" ?
+            {
+                name: "Employees",
+                href: "/employees",
+                icon: UserIcon
+            } :
+            {
+                name: "Attendance",
+                href: "/attendance",
+                icon: CalendarIcon
+            },
         {
-            name:"Employees",
-            href: "/employees",
-            icon: UserIcon
-        } :
-        {
-            name:"Attendance",
-            href: "/attendance",
-            icon: CalendarIcon
-        },
-        {
-            name:"Leave",
+            name: "Leave",
             href: "/leave",
             icon: FileTextIcon
         },
         {
-            name:"Payslips",
+            name: "Payslips",
             href: "/payslips",
             icon: DollarSignIcon
         },
         {
-            name:"Settings",
+            name: "Settings",
             href: "/settings",
             icon: SettingsIcon
         },
@@ -80,9 +80,9 @@ const Sidebar = () => {
                     <div className='flex items-center gap-3' >
                         <div className='w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center ring-1 ring-white/10 shrink-0 ' >
 
-                        <span className='text-slate-400 text-xs font-semibold' >
-                            {userName.charAt(0).toUpperCase()}
-                        </span>
+                            <span className='text-slate-400 text-xs font-semibold' >
+                                {userName.charAt(0).toUpperCase()}
+                            </span>
                         </div>
                         <div className='min-w-0' >
                             <p className='text-[13px] font-medium text-slate-200 truncate' >{userName}</p>
@@ -91,14 +91,14 @@ const Sidebar = () => {
 
                     </div>
                 </div>
-            ) }
+            )}
             {/* section label */}
             <div className='px-5 pt-5 pb-2' >
                 <p className='text-[10px] font-semibold uppercase tracking-[0.12em] text-slate-500 ' >Naviagtion</p>
 
             </div>
             {/* navigation list */}
-            
+
             {/* logout */}
 
         </>
